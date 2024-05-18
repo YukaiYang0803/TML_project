@@ -1,0 +1,14 @@
+[
+    {
+        "question_id": 1,
+        "Q": "Steve is 5'6\". He grows 6 inches. The height of Emma is 8 feet. How tall is Steve in inches?",
+        "O": "To find out how tall Steve is in inches after growing 6 inches, we first need to convert his initial height from feet to inches.\n\nSteve's initial height is 5 feet 6 inches, which is equivalent to 5 * 12 inches + 6 inches = 66 inches.\n\nAfter growing 6 inches, Steve's new height is 66 inches + 6 inches = 72 inches.\n\nNow, to compare Steve's height with Emma's height, we need to convert Emma's height from feet to inches.\n\nEmma's height is 8 feet * 12 inches = 96 inches.\n\nTherefore, Steve is 72 inches tall.\n\n####72",
+        "A": "72"
+    },
+    {
+        "question_id": 2,
+        "Q": "A magazine costs $3 each. Jewel bought 10 magazines to be sold at $3.50 each. Jewel's neighbor bought 1000 newspapers. How much will Jewel gain from selling her magazines?",
+        "O": "To find out how much Jewel will gain from selling her magazines, we need to calculate the total cost of the magazines she bought and the total revenue she will earn from selling them.\n\n1. Total cost of the magazines Jewel bought:\n   Cost of 1 magazine = $3\n   Number of magazines bought = 10\n   Total cost = $3 * 10 = $30\n\n2. Total revenue from selling the magazines:\n   Selling price of 1 magazine = $3.50\n   Number of magazines to be sold = 10\n   Total revenue = $3.50 * 10 = $35\n\n3. Profit from selling the magazines:\n   Profit = Total revenue - Total cost\n   Profit = $35 - $30 = $5\n\nTherefore, Jewel will gain $5 from selling her magazines.\n\n####5",
+        "A": "5"
+    }
+]

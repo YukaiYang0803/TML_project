@@ -1,0 +1,14 @@
+[
+    {
+        "question_id": 1,
+        "Q": "Steve is 5'6\". He grows 6 inches. The height of Emma is 8 feet. How tall is Steve in inches?",
+        "O": "**Pseudocode:**\n```\n1. Set Steve's initial height to 5 feet and 6 inches.\n2. Add 6 inches to Steve's height.\n3. Convert Steve's height to total inches.\n4. Set Emma's height to 8 feet.\n5. Convert Emma's height to inches.\n6. Print Steve's height in inches.\n```\n\nSteve's initial height is 5 feet 6 inches.  \nAfter growing 6 inches, Steve's height becomes 5 feet 12 inches.  \nConverting this to total inches, Steve's height is 72 inches.  \n\n#### 72",
+        "A": "72"
+    },
+    {
+        "question_id": 2,
+        "Q": "A magazine costs $3 each. Jewel bought 10 magazines to be sold at $3.50 each. Jewel's neighbor bought 1000 newspapers. How much will Jewel gain from selling her magazines?",
+        "O": "**Pseudocode:**\n```\n1. Set the cost of one magazine (COST_MAGAZINE) to $3\n2. Set the selling price of one magazine (SELLING_PRICE) to $3.50\n3. Set the number of magazines bought by Jewel (NUM_MAGAZINES) to 10\n4. Calculate the total cost of magazines bought by Jewel (TOTAL_COST) = COST_MAGAZINE * NUM_MAGAZINES\n5. Calculate the total revenue from selling all magazines (TOTAL_REVENUE) = SELLING_PRICE * NUM_MAGAZINES\n6. Calculate the gain from selling magazines (GAIN) = TOTAL_REVENUE - TOTAL_COST\n7. Display GAIN\n```\n\n**Calculation:**\n- COST_MAGAZINE = $3\n- SELLING_PRICE = $3.50\n- NUM_MAGAZINES = 10\n- TOTAL_COST = $3 * 10 = $30\n- TOTAL_REVENUE = $3.50 * 10 = $35\n- GAIN = $35 - $30 = $5\n\n####5",
+        "A": "5"
+    }
+]
