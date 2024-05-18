@@ -3,6 +3,7 @@ from openai import OpenAI
 import json
 import re
 import os
+
 API_KEY = os.getenv('API_KEY')
 
 def extract_questions_and_answers(json_file_name):
@@ -34,58 +35,118 @@ def test_extraction():
 
 
 
-def get_model_responses(questions: list):
+def get_model_responses(system_prompt: dict, questions: list):
     client = OpenAI(
         api_key = API_KEY
     )
     responses = []
 
-    # System Prompt and few-shot examples
-    messages_list = [{"role":"system", "content": 
-                    "I am a helpful assistant that can solve math problems "
-                    "by first write pseudocode to reflect the problem and then answer question based on "
-                    "the pseudocode I just wrote. When outputing the final arithmetic answer, I should "
-                    "always start with \"Answer:\"."}
+    for question in questions:
+        system_prompt.append({"role": "user", "content": question})
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=system_prompt,
+            max_tokens=1500,
+            n = 1,
+            temperature= 0.1
+        )
+        responses.append(response.choices[0].message.content)
+    return responses
+
+
+def extract_final_answer(response_text):
+    # Define the regular expression pattern to find 'Answer:' followed by a number
+    pattern = re.compile(r'####\s*(\d+)', re.IGNORECASE)
+    
+    # Initialize an empty list to store the extracted answers
+    answers = []
+    
+    # Loop through each response in the input list
+    for response in response_text:
+        # Search for the pattern in the response
+        match = pattern.search(response)
+        if match:
+            # Extract the number after 'Answer:' and convert it to an integer
+            answer = match.group(1)
+            # Add the answer to the list
+            answers.append(answer)
+    
+    return answers
+
+
+def coq_system_prompt():
+    """
+    This function Defines the Chain of Code system prompt
+    """
+    sys_prompt = [{"role":"system", "content": 
+                    "You are an expert who always write a pseudocode about a math problem "
+                    "before start answering the question itself. In the end of the answer, "
+                    "you should extract and print the final numeric answer that contains "
+                    "only numbers, not symbols or signs, and doing so by begins with ####"}
                 #  {"role":"user", "content": "I know there's something in the wake of your smile"},
                 #  {"role":"assistant", "content": "I get a notion from the look in your eyes, yeah"},
                 #  {"role":"user", "content": "You've built a love but that love falls apart"},
                 #  {"role":"assistant", "content": ""},
                 #  {"role":"user", "content": ""}
                 ]    
+    return sys_prompt
 
-    for question in questions:
-        messages_list.append({"role": "user", "content": question})
-        response = client.chat.completions.create(
-            engine="gpt-3.5-turbo",
-            prompt=question,
-            max_tokens=150,
-            n = 1,
-            temperature= 0.1
-        )
-        responses.append(response.choices[0].text.strip())
-    return responses
-
-
-def extract_final_answer(response_text: list):
-    # Use a single pattern to identify the final answer
-    pattern = r"Answer:\s*(.*)"
-    
-    match = re.search(pattern, response_text, re.IGNORECASE)
-    if match:
-        return match.group(1).strip()
-    
-    # If no pattern matched, return the entire response (or handle as needed)
-    return response_text.strip()
+def cot_system_prompt():
+    """
+    This function Defines the Chain of Thought system prompt
+    """
+    sys_prompt = [{"role":"system", "content": 
+                    "You are an expert at solving math problem, you should think step by step "
+                    "before start answering the question itself. In the end of the answer, "
+                    "you should extract and print the final numeric answer that contains "
+                    "only numbers, not symbols or signs, and doing so by begins with ####"}
+                #  {"role":"user", "content": "I know there's something in the wake of your smile"},
+                #  {"role":"assistant", "content": "I get a notion from the look in your eyes, yeah"},
+                #  {"role":"user", "content": "You've built a love but that love falls apart"},
+                #  {"role":"assistant", "content": ""},
+                #  {"role":"user", "content": ""}
+                ]    
+    return sys_prompt
 
 def main():
-    pass
+    questions, answers = extract_questions_and_answers('GSM-IC_2step.json')
+    # Subset q/a for faster testing
+    n = 10
+    questions_first_n = questions[:n]
+    answers_first_n = answers[:n]
+    coq_output = get_model_responses(coq_system_prompt(), questions_first_n[0:20])
+    cot_output = get_model_responses(cot_system_prompt(), questions_first_n[0:20])
+    coq_responses = extract_final_answer(coq_output)
+    cot_responses = extract_final_answer(cot_output)
+
+    # Initialize success for both methods to be 0
+    cot_success = 0
+    coq_success = 0
+
+    min_length = min(len(answers_first_n), len(coq_responses), len(cot_responses))
+
+    for i in range(min_length):
+        if answers[i] == cot_success[i]:
+            cot_success += 1
+        
+        if answers[i] == coq_success[i]:
+            coq_success += 1
+    
+    # Debugging purposes:
+    # print(responses)
+    # print(answers[0:2])
+
+    print("Success Rate for CoC is:", coq_success/min_length)
+    print("Success Rate for CoT is:", cot_success/min_length)
+
 
 
 
 
 if __name__ == "__main__":
-    # main()
-    test_extraction()
+    main()
+
+    
     
     
     
