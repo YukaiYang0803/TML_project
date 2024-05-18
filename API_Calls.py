@@ -2,6 +2,8 @@
 from openai import OpenAI
 import json
 import re
+import os
+API_KEY = os.getenv('API_KEY')
 
 def extract_questions_and_answers(json_file_name):
     """
@@ -34,7 +36,7 @@ def test_extraction():
 
 def get_model_responses(questions: list):
     client = OpenAI(
-        api_key = "sk-proj-A1tljddWFSF8RMO4NMD0T3BlbkFJzSIODvwSb7siVk7rpNHC"
+        api_key = API_KEY
     )
     responses = []
 
@@ -54,7 +56,7 @@ def get_model_responses(questions: list):
     for question in questions:
         messages_list.append({"role": "user", "content": question})
         response = client.chat.completions.create(
-            engine="text-davinci-003",
+            engine="gpt-3.5-turbo",
             prompt=question,
             max_tokens=150,
             n = 1,
