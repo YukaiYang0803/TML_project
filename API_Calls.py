@@ -24,8 +24,8 @@ debug_print = args_dict["debug_print"]
 
 model = "gpt-3.5-turbo" if model_name == 'gpt-3.5' else None
 
-# API_KEY = os.getenv('API_KEY')
-API_KEY = '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'
+API_KEY = os.getenv('API_KEY')
+# API_KEY = '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'
 
 def extract_questions_and_answers(json_file_name):
     """
