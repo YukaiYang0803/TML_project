@@ -169,7 +169,7 @@ def main():
         # Compute and update success rate
         coq_success += (answer == coq_response)
         cot_success += (answer == cot_response)
-        pbar.set_postfix({"coq acc": "{:.2f}".format(coq_success/n), "cot acc": "{:.2f}".format(cot_success/n)})
+        pbar.set_postfix({"coq acc": "{:.2f}".format(coq_success/(i+1)*100), "cot acc": "{:.2f}".format(cot_success/(i+1)*100})
 
     # Debugging purposes:
     # print(responses)
