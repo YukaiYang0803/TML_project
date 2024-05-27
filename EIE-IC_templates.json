@@ -1,17 +1,24 @@
 {
     "off_topic_contexts": [
-        "The shoe size of [ROLE] is [NUMBER].",
+        "[ROLE] has a shoe size of [NUMBER].",
         "[ROLE] is [NUMBER] years old.",
-        "The height of [ROLE] is [NUMBER] feet.",
-        "[ROLE] bought [NUMBER] tomatoes from the grocery store.",
+        "[ROLE] has a height of [NUMBER] feet.",
         "[ROLE] has read [NUMBER] books in the past year."
+    ],
+    "off_topic_contexts_nonhuman": [
+        "[ROLE] appeared [NUMBER] times in the dataset.",
+        "[ROLE] was categorized into [NUMBER] groups.",
+        "[ROLE] has an average size of [NUMBER].",
+        "[ROLE] was observed [NUMBER] times during the study."
     ],
     "questions": [
         {
             "question_id": 0,
             "question": "Cole is on the varsity basketball team. Is Cole over 6 feet tall? Which of the following statements is/are sufficient to answer the previous question?\n1. Cole is under 7 feet tall.\n2. Every player on Cole's varsity basketball team is above 6'1\".\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Cole",
-            "number": "3",
+            "human": 1,
+            "min_number": 6,
+            "max_number": 7,
             "in_topic_contexts": [
                 "Cole prefers studying history over mathematics.",
                 "The school cafeteria serves pizza every Friday.",
@@ -23,7 +30,9 @@
             "question_id": 1,
             "question": "Does Alice like elephants more than zebras? Which of the following statements is/are sufficient to answer the previous question?\n1. Elephants are Alice's favourite animals.\n2. Zebras are the animals that Alice likes the least.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Alice",
-            "number": "4",
+            "human": 1,
+            "min_number": 1,
+            "max_number": 2,
             "in_topic_contexts": [
                 "Alice often volunteers at the local animal shelter.",
                 "Elephants are known to have strong family bonds.",
@@ -34,8 +43,10 @@
         {
             "question_id": 2,
             "question": "All the students in a classroom wrote an exam. How many students are in the classroom? Which of the following statements is/are sufficient to answer the previous question?\n1. Five students failed.\n2. One student was 29th from the top and 16th from the bottom.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Student",
-            "number": "5",
+            "role": "Students",
+            "human": 1,
+            "min_number": 5,
+            "max_number": 29,
             "in_topic_contexts": [
                 "The classroom has 25 desks arranged in five rows.",
                 "The exam was scheduled for 10 AM on a Tuesday.",
@@ -47,7 +58,9 @@
             "question_id": 3,
             "question": "Which direction is Samuel facing in? Which of the following statements is/are sufficient to answer the previous question?\n1. Samuel is not facing North.\n2. Samuel is facing the sun.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Samuel",
-            "number": "6",
+            "human": 1,
+            "min_number": 1,
+            "max_number": 1,
             "in_topic_contexts": [
                 "Samuel wears glasses only while reading.",
                 "The sun rises in the east and sets in the west.",
@@ -58,8 +71,10 @@
         {
             "question_id": 4,
             "question": "Are there only blue balls in the basket? Which of the following statements is/are sufficient to answer the previous question?\n1. There are no red balls in the basket.\n2. The smallest ball in the basket is green.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Player",
-            "number": "7",
+            "role": "Balls",
+            "human": 0,
+            "min_number": 1,
+            "max_number": 1,
             "in_topic_contexts": [
                 "The basket is made of wicker and has a handle.",
                 "There are ten balls in the basket in total.",
@@ -71,7 +86,9 @@
             "question_id": 5,
             "question": "Does Leonid like carrots? Which of the following statements is/are sufficient to answer the previous question?\n1. Leonid hates vegetables.\n2. Leonid prefers carrots to leeks.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Leonid",
-            "number": "8",
+            "human": 1,
+            "min_number": 1,
+            "max_number": 2,
             "in_topic_contexts": [
                 "Leonid enjoys gardening in his free time.",
                 "Carrots are rich in vitamin A and good for eyesight.",
@@ -82,8 +99,10 @@
         {
             "question_id": 6,
             "question": "What is the probability of event B occurring? Which of the following statements is/are sufficient to answer the previous question?\n1. Probability of event A is 0.55.\n2. Probability of either A or B or both A and B happening is 0.65.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Event",
-            "number": "9",
+            "role": "Events",
+            "human": 0,
+            "min_number": 0,
+            "max_number": 65,
             "in_topic_contexts": [
                 "Event A and B are mutually exclusive.",
                 "The probability is calculated using a formula.",
@@ -94,8 +113,10 @@
         {
             "question_id": 11,
             "question": "A family has 7 children. How many of the children are boys? Which of the following statements is/are sufficient to answer the previous question?\n1. There are fewer girls than boys.\n2. Each girl has half as many sisters as brothers.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Child",
-            "number": "10",
+            "role": "Children",
+            "human": 1,
+            "min_number": 1,
+            "max_number": 7,
             "in_topic_contexts": [
                 "The family lives in a two-story house.",
                 "All children go to the same school.",
@@ -107,7 +128,9 @@
             "question_id": 12,
             "question": "When is Qi's birthday? Which of the following statements is/are sufficient to answer the previous question?\n1. Tony correctly states that Qi's birthday is after 2nd and before 5th March.\n2. Brenna incorrectly states that Qi's birthday is on 3rd March.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Qi",
-            "number": "11",
+            "human": 1,
+            "min_number": 2,
+            "max_number": 5,
             "in_topic_contexts": [
                 "Qi’s birthday is celebrated every year with a party.",
                 "March is known for its unpredictable weather.",
@@ -119,7 +142,9 @@
             "question_id": 13,
             "question": "Is Alexia a doctor? Which of the following statements is/are sufficient to answer the previous question?\n1. Either Alexia or Jenny is a doctor.\n2. Alexia and Jenny are a doctor and nurse respectively.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Alexia",
-            "number": "12",
+            "human": 1,
+            "min_number": 1,
+            "max_number": 2,
             "in_topic_contexts": [
                 "Alexia graduated from medical school last year.",
                 "Doctors often work long hours.",
@@ -130,8 +155,10 @@
         {
             "question_id": 14,
             "question": "Will there be more crocodile attacks next year? Which of the following statements is/are sufficient to answer the previous question?\n1. There were more crocodile attacks this year than last year.\n2. 56 people were attacked by crocodiles this year.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Person",
-            "number": "13",
+            "role": "People",
+            "human": 1,
+            "min_number": 1,
+            "max_number": 56,
             "in_topic_contexts": [
                 "Crocodile attacks are common in tropical regions.",
                 "Last year, there were 40 crocodile attacks reported.",
@@ -142,8 +169,10 @@
         {
             "question_id": 15,
             "question": "Did African member states form the largest regional group in the United Nations in 1999? Which of the following statements is/are sufficient to answer the previous question?\n1. The United Nations Secretary General in 1999 was Kofi Annan, a Ghanian.\n2. In 1998, the African regional group received the largest fraction of UN aid.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Member",
-            "number": "14",
+            "role": "The states",
+            "human": 0,
+            "min_number": 1,
+            "max_number": 1,
             "in_topic_contexts": [
                 "The United Nations was established in 1945.",
                 "Kofi Annan served as UN Secretary-General from 1997 to 2006.",
@@ -155,7 +184,9 @@
             "question_id": 16,
             "question": "What is the value of x? Which of the following statements is/are sufficient to answer the previous question?\n1. x = 3.\n2. x = x.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "X",
-            "number": "15",
+            "human": 0,
+            "min_number": 3,
+            "max_number": 3,
             "in_topic_contexts": [
                 "X is a common variable used in mathematics.",
                 "Solving for X involves algebraic techniques.",
@@ -167,7 +198,9 @@
             "question_id": 18,
             "question": "A student needs to get at least 70% to pass the test. Does Student X pass the test? Which of the following statements is/are sufficient to answer the previous question?\n1. Student X got 7 questions correct.\n2. Student X got all the questions correct.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Student X",
-            "number": "16",
+            "human": 1,
+            "min_number": 7,
+            "max_number": 70,
             "in_topic_contexts": [
                 "The test consists of multiple-choice questions.",
                 "Student X studied hard for the test.",
@@ -178,8 +211,10 @@
         {
             "question_id": 19,
             "question": "Is circle A smaller than circle B? Which of the following statements is/are sufficient to answer the previous question?\n1. The area of circle B is two times the area of circle A.\n2. The radius of circle B is less than the radius of circle A.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Circle",
-            "number": "17",
+            "role": "Circle A",
+            "human": 0,
+            "min_number": 2,
+            "max_number": 2,
             "in_topic_contexts": [
                 "Circles are defined by their radius and area.",
                 "The area of a circle is calculated using πr².",
@@ -190,8 +225,10 @@
         {
             "question_id": 24,
             "question": "How many people in Maria's office read the newspaper? Which of the following statements is/are sufficient to answer the previous question?\n1. Half the people in the office don't read the newspaper.\n2. 10% of the people in Maria's office read the newspaper.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Person",
-            "number": "18",
+            "role": "People",
+            "human": 1,
+            "min_number": 10,
+            "max_number": 50,
             "in_topic_contexts": [
                 "Reading newspapers can keep people informed.",
                 "Maria's office has a subscription to several newspapers.",
@@ -203,7 +240,9 @@
             "question_id": 26,
             "question": "Is x divisible by 2? Which of the following statements is/are sufficient to answer the previous question?\n1. x is an even number.\n2. The square root of x is greater than 4.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "X",
-            "number": "19",
+            "human": 0,
+            "min_number": 2,
+            "max_number": 4,
             "in_topic_contexts": [
                 "Numbers divisible by 2 are called even numbers.",
                 "Checking divisibility involves simple arithmetic.",
@@ -215,7 +254,9 @@
             "question_id": 27,
             "question": "How old is Qi? Which of the following statements is/are sufficient to answer the previous question?\n1. Five years ago, Qi's age was half of her current age.\n2. Qi will be 23 years old in 5 years.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Qi",
-            "number": "20",
+            "human": 1,
+            "min_number": 5,
+            "max_number": 23,
             "in_topic_contexts": [
                 "A person's age changes every year.",
                 "Calculating age involves understanding time periods.",
@@ -227,7 +268,9 @@
             "question_id": 28,
             "question": "When is Tony's birthday? Which of the following statements is/are sufficient to answer the previous question?\n1. Natasha correctly states that Tony's birthday is after 16th and before 19th March.\n2. Brenna incorrectly states that Tony's birthday is on 20th March.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Tony",
-            "number": "21",
+            "human": 1,
+            "min_number": 16,
+            "max_number": 20,
             "in_topic_contexts": [
                 "Birthdays are special occasions for celebration.",
                 "Tony often has birthday parties with friends.",
@@ -238,8 +281,10 @@
         {
             "question_id": 29,
             "question": "There are 50 cowsheds on a farm. How many cows live on the farm? Which of the following statements is/are sufficient to answer the previous question?\n1. Each cowshed contains one cow.\n2. There are at least 60 cows.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Cow",
-            "number": "22",
+            "role": "Cows",
+            "human": 0,
+            "min_number": 50,
+            "max_number": 60,
             "in_topic_contexts": [
                 "Cows are commonly found on farms.",
                 "Each cowshed typically houses one or more cows.",
@@ -251,7 +296,9 @@
             "question_id": 31,
             "question": "Are some PQRs also XYZs? Which of the following statements is/are sufficient to answer the previous question?\n1. Some XYZs are ABCs.\n2. Some XYZs are PQRs.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "PQR",
-            "number": "23",
+            "human": 0,
+            "min_number": 1,
+            "max_number": 2,
             "in_topic_contexts": [
                 "PQR and XYZ are often used as placeholders in logic.",
                 "Logical relationships are crucial in problem-solving.",
@@ -263,7 +310,9 @@
             "question_id": 32,
             "question": "Alina wants to read an adventure book. She is given a book titled \"Under the Sun\". Will Alina want to read \"Under the Sun\"? Which of the following statements is/are sufficient to answer the previous question?\n1. The author of \"Under the Sun\" only writes adventure books.\n2. Alina is only offered adventure and mystery books and \"Under the Sun\" is not a mystery book.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Alina",
-            "number": "24",
+            "human": 1,
+            "min_number": 1,
+            "max_number": 2,
             "in_topic_contexts": [
                 "Books come in various genres, including adventure.",
                 "Reading preferences vary among individuals.",
@@ -275,7 +324,9 @@
             "question_id": 35,
             "question": "Who is G sitting opposite to in a game of Monopoly involving four players E, F, G, H? Which of the following statements is/are sufficient to answer the previous question?\n1. E is sitting to the right of H.\n2. F is sitting opposite to H.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "G",
-            "number": "25",
+            "human": 1,
+            "min_number": 1,
+            "max_number": 4,
             "in_topic_contexts": [
                 "Monopoly is a board game with specific rules.",
                 "Players sit around a table to play Monopoly.",
@@ -286,8 +337,10 @@
         {
             "question_id": 37,
             "question": "How many ants in total are in this room? Which of the following statements is/are sufficient to answer the previous question?\n1. Only black ants can be found indoors.\n2. There are seven red ants in this room.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Ant",
-            "number": "26",
+            "role": "Ants",
+            "human": 0,
+            "min_number": 1,
+            "max_number": 7,
             "in_topic_contexts": [
                 "Ants are small insects found in many environments.",
                 "Counting ants can be challenging due to their size.",
@@ -299,7 +352,9 @@
             "question_id": 38,
             "question": "What time does the clock show? Which of the following statements is/are sufficient to answer the previous question?\n1. The hour hand is between 5 and 6.\n2. The clock shows a quarter past five.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Clock",
-            "number": "27",
+            "human": 0,
+            "min_number": 5,
+            "max_number": 6,
             "in_topic_contexts": [
                 "Clocks are used to tell time accurately.",
                 "The position of clock hands indicates time.",
@@ -311,7 +366,9 @@
             "question_id": 41,
             "question": "What time does the bus leave for the airport today? Which of the following statements is/are sufficient to answer the previous question?\n1. Buses usually depart on time.\n2. The scheduled arrival is at 11:40 a.m.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Bus",
-            "number": "28",
+            "human": 0,
+            "min_number": 1,
+            "max_number": 11,
             "in_topic_contexts": [
                 "Buses follow a schedule to maintain punctuality.",
                 "The airport bus departs at specific times daily.",
@@ -323,7 +380,9 @@
             "question_id": 42,
             "question": "Is Ajay the only son of Aparna? Which of the following statements is/are sufficient to answer the previous question?\n1. Aparna's brother has only one nephew.\n2. Ruhi is Ajay’s sister.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
             "role": "Ajay",
-            "number": "29",
+            "human": 1,
+            "min_number": 1,
+            "max_number": 1,
             "in_topic_contexts": [
                 "Family relationships can determine sibling counts.",
                 "Ajay has a close relationship with his family.",
@@ -334,8 +393,10 @@
         {
             "question_id": 43,
             "question": "How many students are sitting in a row facing the board? Which of the following statements is/are sufficient to answer the previous question?\n1. Kavya, who is fifth from the left end, is ninth to the left of Aadesh who is seventh from the right end.\n2. Jagrav is eighth to the right of Neerja, who is sixteenth from the right end and fifth from the left end.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Student",
-            "number": "30",
+            "role": "Students",
+            "human": 1,
+            "min_number": 5,
+            "max_number": 16,
             "in_topic_contexts": [
                 "Students sit in rows facing the teacher.",
                 "The classroom has a specific seating arrangement.",
@@ -346,8 +407,10 @@
         {
             "question_id": 44,
             "question": "In a game, words for colours are mixed up. What is the colour of a fresh tomato in this game? Which of the following statements is/are sufficient to answer the previous question?\n1. In the game, blue is called green, white is called black, brown is called purple.\n2. In the game, yellow is called white, red is called orange and green is called brown.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Player",
-            "number": "31",
+            "role": "Players",
+            "human": 0,
+            "min_number": 1,
+            "max_number": 2,
             "in_topic_contexts": [
                 "Colors are often used in games and activities.",
                 "Understanding color names is important in the game.",
@@ -358,8 +421,10 @@
         {
             "question_id": 48,
             "question": "How many girls are there in a family of 4 children? Which of the following statements is/are sufficient to answer the previous question?\n1. Each girl has twice as many sisters as brothers.\n2. The youngest child is a boy and he has 3 sisters.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n",
-            "role": "Girl",
-            "number": "32",
+            "role": "Girls",
+            "human": 1,
+            "min_number": 3,
+            "max_number": 4,
             "in_topic_contexts": [
                 "Families can have varying numbers of children.",
                 "Knowing the number of siblings helps understand family size.",
