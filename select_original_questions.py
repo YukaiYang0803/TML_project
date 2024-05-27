@@ -263,7 +263,7 @@ Your should end with ####X, where you replace X with ONLY the final answer choic
         
         # Record the outputs
         if answer == int(coc_response) == int(cot_response):
-            passed_questions.append({"question_id":i, "Q": question})
+            passed_questions.append({"question_id":i, "Q": question, "A": answer})
 
 
         if len(passed_questions) >= num_passed_questions:
