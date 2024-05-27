@@ -12,6 +12,7 @@ parser.add_argument("--dataset_name", type=str, default="GSM-IC_2step")
 parser.add_argument("--dataset_dir", type=str, default="data/")
 parser.add_argument("--model_name", type=str, default="gpt-3.5")
 parser.add_argument("--num_questions", type=int, default=None)
+parser.add_argument("--num_passed_questions",type=int,default=30)
 parser.add_argument("--debug_print", action="store_true", default=False)
 args = parser.parse_args()
 args_dict = vars(args)
@@ -20,9 +21,13 @@ dataset_name = args_dict["dataset_name"]
 dataset_dir = args_dict["dataset_dir"]
 model_name = args_dict["model_name"]
 num_questions = args_dict["num_questions"]
+num_passed_questions = args_dict["num_passed_questions"]
 debug_print = args_dict["debug_print"]
 
 model = "gpt-3.5-turbo" if model_name == 'gpt-3.5' else "gpt-4o" if model_name == 'gpt-4o' else "gpt-4-turbo" if model_name == 'gpt-4' else None
+with open('description_prompt.json') as file:
+    data = json.load(file)
+description_prompt = data[dataset_name]
 
 # API_KEY = os.getenv('API_KEY')
 API_KEY = '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'
@@ -38,9 +43,22 @@ def extract_questions_and_answers(json_file_name):
     new_questions = []
     answers = []
     
-    for item in data:
-        new_questions.append(item.get('new_question'))
-        answers.append(item.get('answer'))
+    if "EIE_raw" in dataset_name:
+        for item in data["examples"]:
+            question = item["input"] + "\n"
+            options = item["target_scores"]
+            truth_label = -1
+            # Iterate through the options to build the multiple choice string and find the truth label
+            for idx, option in enumerate(options.keys()):
+                question += f"{chr(65 + idx)}. {option}\n"
+                if options[option] == 1:
+                    truth_label = idx
+            new_questions.append(question)
+            answers.append(truth_label)
+    else: #GSM-IC in dataset_name
+        for item in data:
+            new_questions.append(item.get('new_question'))
+            answers.append(item.get('answer'))
     
     return new_questions, answers
 
@@ -94,41 +112,23 @@ def extract_final_answer(response_text):
     return answer#s
 
 
-def coc_system_prompt():
+def coc_system_prompt(description_prompt):
     """
     This function Defines the Chain of Code system prompt
     """
     sys_prompt = [{"role": "system", 
-                   "content": "Solve grade school math problem. Be aware to ignore irrelevant information given in the questions."
-                    # "content": "You are an expert who always writes a pseudocode about a math problem "
-                    #            "before start answering the question itself. Feel free to ignore irrelevant information given in the questions. In the end of the answer, "
-                    #            "you should extract and print the final numeric answer that contains "
-                    #            "only numbers, not symbols or signs, and doing so by begins with ####"
+                   "content": description_prompt
                   }
-                #  {"role":"user", "content": "I know there's something in the wake of your smile"},
-                #  {"role":"assistant", "content": "I get a notion from the look in your eyes, yeah"},
-                #  {"role":"user", "content": "You've built a love but that love falls apart"},
-                #  {"role":"assistant", "content": ""},
-                #  {"role":"user", "content": ""}
                 ]    
     return sys_prompt
 
-def cot_system_prompt():
+def cot_system_prompt(description_prompt):
     """
     This function Defines the Chain of Thought system prompt
     """
     sys_prompt = [{"role": "system",
-                   "content": "Solve grade school math problem. Feel free to ignore irrelevant information given in the questions."
-                #    "content": "You are an expert at solving math problem, you should think step by step "
-                #               "before start answering the question itself. Feel free to ignore irrelevant information given in the questions. In the end of the answer, "
-                #               "you should extract and print the final numeric answer that contains "
-                #               "only numbers, not symbols or signs, and doing so by begins with ####"
+                   "content": description_prompt
                   }
-                #  {"role":"user", "content": "I know there's something in the wake of your smile"},
-                #  {"role":"assistant", "content": "I get a notion from the look in your eyes, yeah"},
-                #  {"role":"user", "content": "You've built a love but that love falls apart"},
-                #  {"role":"assistant", "content": ""},
-                #  {"role":"user", "content": ""}
                 ]    
     return sys_prompt
 
@@ -220,14 +220,12 @@ Therefore, Officer Hopps needs to average 5 tickets per day for the rest of the 
 #### 5
 """
     instruction = """
-Your should end with ####XXX, where you replace XXX with ONLY the final answer number.
+Your should end with ####X, where you replace X with ONLY the final answer choice as a number. 0 Indicates A, 1 indicates B, etc.
 """
 
     # Initialize variables to record the responses
-    coc_answers = []
-    cot_answers = []
-    wrong_answers = []
-    
+    passed_questions = []
+
     # Initialize success for both methods to be 0
     cot_success = 0
     coc_success = 0
@@ -240,68 +238,55 @@ Your should end with ####XXX, where you replace XXX with ONLY the final answer n
         match = False
         count = 0
         while not match: # Keep sending requests until format matches
-            coc_output = get_model_responses(coc_system_prompt(), prompt + coc_sol + "\n\nQ: " + question + instruction + "\nA: Let's write down the pseudocode: ")
+            # coc_output = get_model_responses(coc_system_prompt(), prompt + coc_sol + "\n\nQ: " + question + instruction + "\nA: Let's write down the pseudocode: ")
+            coc_output = get_model_responses(coc_system_prompt(description_prompt), "Q: " + question + instruction + "\nA: Let's write down the pseudocode: ")
             coc_response = extract_final_answer(coc_output)
-            match = True if coc_response != None else False
-            total_wrong_format += 1 if not match else 0
-            count += 1 if not match else 0
-            if count > 5:
-                coc_response = -1
-                break
+            match = True # if coc_response != None else False
+            # total_wrong_format += 1 if not match else 0
+            # count += 1 if not match else 0
+            # if count > 5:
+            #     coc_response = -1
+            #     break
 
         match = False
         count = 0
         while not match: # Keep sending requests until format matches
-            cot_output = get_model_responses(cot_system_prompt(), prompt + cot_sol + "\n\nQ: " + question + instruction + "\nA: Let's think step by step:  ")
+            # cot_output = get_model_responses(cot_system_prompt(), prompt + cot_sol + "\n\nQ: " + question + instruction + "\nA: Let's think step by step:  ")
+            cot_output = get_model_responses(cot_system_prompt(description_prompt), "Q: " + question + instruction + "\nA: Let's think step by step:  ")
             cot_response = extract_final_answer(cot_output)
-            match = True if cot_response != None else False
-            total_wrong_format += 1 if not match else 0
-            count += 1 if not match else 0
-            if count > 5:
-                cot_response = -1
-                break
+            match = True # if cot_response != None else False
+            # total_wrong_format += 1 if not match else 0
+            # count += 1 if not match else 0
+            # if count > 5:
+            #     cot_response = -1
+            #     break
         
         # Record the outputs
-        coc_answers.append({"question_id":i+1, "Q": question, "O": coc_output, "A": coc_response})
-        cot_answers.append({"question_id":i+1, "Q": question, "O": cot_output, "A": cot_response})
+        if answer == int(coc_response) == int(cot_response):
+            passed_questions.append({"question_id":i, "Q": question})
 
-        # Compute and update success rate
-        answer = convert_to_int(answer)
-        coc_success += (answer == int(coc_response))
-        cot_success += (answer == int(cot_response))
-        pbar.set_postfix({"coc acc": "{:.2f}".format(coc_success/(i+1)*100), "cot acc": "{:.2f}".format(cot_success/(i+1)*100)})
 
-        if answer != int(coc_response):
-            wrong_answers.append({"question_id":i+1, "Q": question, "A0": answer, "O1": coc_output, "A1": coc_response, "O2": cot_output, "A2": cot_response})
+        if len(passed_questions) >= num_passed_questions:
+            break
+
+        pbar.set_postfix({"passed questions": "{}".format(len(passed_questions))})
         
     # Debugging purposes:
     # print(responses)
     # print(answers[0:2])
 
-    print("Success Rate for CoC is:", coc_success/n)
-    print("Success Rate for CoT is:", cot_success/n)
+    # print("Success Rate for CoC is:", coc_success/n)
+    # print("Success Rate for CoT is:", cot_success/n)
+    print('Done selecting easy questions!')
     
-    if debug_print == True:
-        print(f"Total counts of incorrect format answers: {total_wrong_format}")
+    # if debug_print == True:
+    #     print(f"Total counts of incorrect format answers: {total_wrong_format}")
 
     # Save the results
-    with open(f"{dataset_dir}{dataset_name}_coc_{model_name}_{num_questions}.json", "w") as file:
-        json.dump(coc_answers, file, indent=4)
-    file.close()
-
-    with open(f"{dataset_dir}{dataset_name}_cot_{model_name}_{num_questions}.json", "w") as file:
-        json.dump(cot_answers, file, indent=4)
-    file.close()
-
-    with open(f"{dataset_dir}{dataset_name}_wrong_{model_name}_{num_questions}.json", "w") as file:
-        json.dump(wrong_answers, file, indent=4)
+    with open(f"{dataset_dir}{dataset_name}_passed_questions.json", "w") as file:
+        json.dump(passed_questions, file, indent=4)
     file.close()
 
 
 if __name__ == "__main__":
     main()
-
-    
-    
-    
-    

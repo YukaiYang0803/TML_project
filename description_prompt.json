@@ -1,0 +1,5 @@
+{
+    "GSM-IC_2step": "Solve grade school math problem. Be aware to ignore irrelevant information given in the questions.",
+    "GSM-IC_mstep": "Solve grade school math problem. Be aware to ignore irrelevant information given in the questions.",
+    "EIE_raw": "Identify statements that are essential to answer a question."
+}
