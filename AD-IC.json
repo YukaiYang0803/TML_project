@@ -26,25 +26,25 @@
     {
         "original_question": "```\nfor i in range(10):\n\tpass\n```\nWhat is the value of i the third time line 2 is executed?",
         "answer": "2",
-        "new_question": "```\nfor i in range(10):\n\tpass\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of i the third time line 2 is executed?",
+        "new_question": "```\nfor i in range(10):\n\tpass\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of i the third time line 2 is executed?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nfor i in range(10):\n\tpass\n```\nWhat is the value of i the third time line 2 is executed?",
         "answer": "2",
-        "new_question": "```\nfor i in range(10):\n\tpass\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of i the third time line 2 is executed?",
+        "new_question": "```\nfor i in range(10):\n\tpass\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of i the third time line 2 is executed?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nfor i in range(10):\n\tpass\n```\nWhat is the value of i the third time line 2 is executed?",
         "answer": "2",
-        "new_question": "```\nfor i in range(10):\n\tpass\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of i the third time line 2 is executed?",
+        "new_question": "```\nfor i in range(10):\n\tpass\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of i the third time line 2 is executed?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nfor i in range(10):\n\tpass\n```\nWhat is the value of i the third time line 2 is executed?",
         "answer": "2",
-        "new_question": "```\nfor i in range(10):\n\tpass\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of i the third time line 2 is executed?",
+        "new_question": "```\nfor i in range(10):\n\tpass\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of i the third time line 2 is executed?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -74,25 +74,25 @@
     {
         "original_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\n```\nWhat is the value of x at line 2?",
         "answer": "5",
-        "new_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of x at line 2?",
+        "new_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of x at line 2?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\n```\nWhat is the value of x at line 2?",
         "answer": "5",
-        "new_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of x at line 2?",
+        "new_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of x at line 2?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\n```\nWhat is the value of x at line 2?",
         "answer": "5",
-        "new_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of x at line 2?",
+        "new_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of x at line 2?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\n```\nWhat is the value of x at line 2?",
         "answer": "5",
-        "new_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of x at line 2?",
+        "new_question": "```\nx = 5\ny = 3\nz = 7\nx = y + x\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of x at line 2?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -122,25 +122,25 @@
     {
         "original_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\n```\nWhat is the value of y at line 4?",
         "answer": "hello",
-        "new_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of y at line 4?",
+        "new_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of y at line 4?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\n```\nWhat is the value of y at line 4?",
         "answer": "hello",
-        "new_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of y at line 4?",
+        "new_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of y at line 4?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\n```\nWhat is the value of y at line 4?",
         "answer": "hello",
-        "new_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of y at line 4?",
+        "new_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of y at line 4?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\n```\nWhat is the value of y at line 4?",
         "answer": "hello",
-        "new_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of y at line 4?",
+        "new_question": "```\nx = 5\nif x > 3:\n\ty = 'hello'\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of y at line 4?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -170,25 +170,25 @@
     {
         "original_question": "```\nif x < 5:\n\tpass\n```\nWhat error does this program surface?",
         "answer": "NameError",
-        "new_question": "```\nif x < 5:\n\tpass\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat error does this program surface?",
+        "new_question": "```\nif x < 5:\n\tpass\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat error does this program surface?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nif x < 5:\n\tpass\n```\nWhat error does this program surface?",
         "answer": "NameError",
-        "new_question": "```\nif x < 5:\n\tpass\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat error does this program surface?",
+        "new_question": "```\nif x < 5:\n\tpass\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat error does this program surface?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nif x < 5:\n\tpass\n```\nWhat error does this program surface?",
         "answer": "NameError",
-        "new_question": "```\nif x < 5:\n\tpass\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat error does this program surface?",
+        "new_question": "```\nif x < 5:\n\tpass\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat error does this program surface?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nif x < 5:\n\tpass\n```\nWhat error does this program surface?",
         "answer": "NameError",
-        "new_question": "```\nif x < 5:\n\tpass\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat error does this program surface?",
+        "new_question": "```\nif x < 5:\n\tpass\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat error does this program surface?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -218,25 +218,25 @@
     {
         "original_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\n```\nWhat is x at the end of this program?",
         "answer": "[0, 3, 6, 9, 12, 15, 18, 21, 24, 27]",
-        "new_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is x at the end of this program?",
+        "new_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is x at the end of this program?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\n```\nWhat is x at the end of this program?",
         "answer": "[0, 3, 6, 9, 12, 15, 18, 21, 24, 27]",
-        "new_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is x at the end of this program?",
+        "new_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is x at the end of this program?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\n```\nWhat is x at the end of this program?",
         "answer": "[0, 3, 6, 9, 12, 15, 18, 21, 24, 27]",
-        "new_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is x at the end of this program?",
+        "new_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is x at the end of this program?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\n```\nWhat is x at the end of this program?",
         "answer": "[0, 3, 6, 9, 12, 15, 18, 21, 24, 27]",
-        "new_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is x at the end of this program?",
+        "new_question": "```\nx = [i for i in range(10)]\nfor i, x_elem in enumerate(x):\n\tx_elem *= 5\n\tx[i] *= 3\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is x at the end of this program?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -266,25 +266,25 @@
     {
         "original_question": "```\nx = [1, 2, 3]\nprint(x[4])\n```\nWhat error does this program produce?",
         "answer": "IndexError",
-        "new_question": "```\nx = [1, 2, 3]\nprint(x[4])\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat error does this program produce?",
+        "new_question": "```\nx = [1, 2, 3]\nprint(x[4])\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat error does this program produce?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nx = [1, 2, 3]\nprint(x[4])\n```\nWhat error does this program produce?",
         "answer": "IndexError",
-        "new_question": "```\nx = [1, 2, 3]\nprint(x[4])\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat error does this program produce?",
+        "new_question": "```\nx = [1, 2, 3]\nprint(x[4])\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat error does this program produce?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nx = [1, 2, 3]\nprint(x[4])\n```\nWhat error does this program produce?",
         "answer": "IndexError",
-        "new_question": "```\nx = [1, 2, 3]\nprint(x[4])\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat error does this program produce?",
+        "new_question": "```\nx = [1, 2, 3]\nprint(x[4])\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat error does this program produce?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nx = [1, 2, 3]\nprint(x[4])\n```\nWhat error does this program produce?",
         "answer": "IndexError",
-        "new_question": "```\nx = [1, 2, 3]\nprint(x[4])\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat error does this program produce?",
+        "new_question": "```\nx = [1, 2, 3]\nprint(x[4])\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat error does this program produce?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -314,25 +314,25 @@
     {
         "original_question": "```\nx = [1, 2, 3]\nprint(x[2])\n```\nWhat is the output of this program?",
         "answer": "3",
-        "new_question": "```\nx = [1, 2, 3]\nprint(x[2])\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the output of this program?",
+        "new_question": "```\nx = [1, 2, 3]\nprint(x[2])\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the output of this program?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nx = [1, 2, 3]\nprint(x[2])\n```\nWhat is the output of this program?",
         "answer": "3",
-        "new_question": "```\nx = [1, 2, 3]\nprint(x[2])\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the output of this program?",
+        "new_question": "```\nx = [1, 2, 3]\nprint(x[2])\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the output of this program?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nx = [1, 2, 3]\nprint(x[2])\n```\nWhat is the output of this program?",
         "answer": "3",
-        "new_question": "```\nx = [1, 2, 3]\nprint(x[2])\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the output of this program?",
+        "new_question": "```\nx = [1, 2, 3]\nprint(x[2])\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the output of this program?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nx = [1, 2, 3]\nprint(x[2])\n```\nWhat is the output of this program?",
         "answer": "3",
-        "new_question": "```\nx = [1, 2, 3]\nprint(x[2])\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the output of this program?",
+        "new_question": "```\nx = [1, 2, 3]\nprint(x[2])\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the output of this program?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -362,25 +362,25 @@
     {
         "original_question": "```\ny = list(map(int, ['1', 'hello', '2']))\n```\nWhat error does this program produce?",
         "answer": "ValueError",
-        "new_question": "```\ny = list(map(int, ['1', 'hello', '2']))\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat error does this program produce?",
+        "new_question": "```\ny = list(map(int, ['1', 'hello', '2']))\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat error does this program produce?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\ny = list(map(int, ['1', 'hello', '2']))\n```\nWhat error does this program produce?",
         "answer": "ValueError",
-        "new_question": "```\ny = list(map(int, ['1', 'hello', '2']))\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat error does this program produce?",
+        "new_question": "```\ny = list(map(int, ['1', 'hello', '2']))\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat error does this program produce?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\ny = list(map(int, ['1', 'hello', '2']))\n```\nWhat error does this program produce?",
         "answer": "ValueError",
-        "new_question": "```\ny = list(map(int, ['1', 'hello', '2']))\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat error does this program produce?",
+        "new_question": "```\ny = list(map(int, ['1', 'hello', '2']))\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat error does this program produce?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\ny = list(map(int, ['1', 'hello', '2']))\n```\nWhat error does this program produce?",
         "answer": "ValueError",
-        "new_question": "```\ny = list(map(int, ['1', 'hello', '2']))\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat error does this program produce?",
+        "new_question": "```\ny = list(map(int, ['1', 'hello', '2']))\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat error does this program produce?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -410,25 +410,25 @@
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nWhat is the value of x at the end of this program?",
         "answer": "625",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of x at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of x at the end of this program?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nWhat is the value of x at the end of this program?",
         "answer": "625",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of x at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of x at the end of this program?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nWhat is the value of x at the end of this program?",
         "answer": "625",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of x at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of x at the end of this program?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nWhat is the value of x at the end of this program?",
         "answer": "625",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of x at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of x at the end of this program?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -458,25 +458,25 @@
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\n```\nWhat is the value of x at the end of this program?",
         "answer": "9",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of x at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of x at the end of this program?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\n```\nWhat is the value of x at the end of this program?",
         "answer": "9",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of x at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of x at the end of this program?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\n```\nWhat is the value of x at the end of this program?",
         "answer": "9",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of x at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of x at the end of this program?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\n```\nWhat is the value of x at the end of this program?",
         "answer": "9",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of x at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(3)\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of x at the end of this program?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -506,25 +506,25 @@
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nWhat is the value of y at the end of this program?",
         "answer": "25",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of y at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of y at the end of this program?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nWhat is the value of y at the end of this program?",
         "answer": "25",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of y at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of y at the end of this program?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nWhat is the value of y at the end of this program?",
         "answer": "25",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of y at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of y at the end of this program?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nWhat is the value of y at the end of this program?",
         "answer": "25",
-        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of y at the end of this program?",
+        "new_question": "```\ndef sq(x):\n\treturn x*x\ny = sq(5)\nx = sq(y)\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of y at the end of this program?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -554,25 +554,25 @@
     {
         "original_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\n```\nWhat is test(101)?",
         "answer": "True",
-        "new_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is test(101)?",
+        "new_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is test(101)?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\n```\nWhat is test(101)?",
         "answer": "True",
-        "new_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is test(101)?",
+        "new_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is test(101)?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\n```\nWhat is test(101)?",
         "answer": "True",
-        "new_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is test(101)?",
+        "new_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is test(101)?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\n```\nWhat is test(101)?",
         "answer": "True",
-        "new_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is test(101)?",
+        "new_question": "```\ndef test(x):\n\tfor i in range(2, x**(0.5)):\n\t\tif x % int(i) == 0:\n\t\t\treturn False\n\treturn True\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is test(101)?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -602,25 +602,25 @@
     {
         "original_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\n```\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
         "answer": "45",
-        "new_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
+        "new_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\n```\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
         "answer": "45",
-        "new_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
+        "new_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\n```\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
         "answer": "45",
-        "new_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
+        "new_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\n```\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
         "answer": "45",
-        "new_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
+        "new_question": "```\nsum = 0\nfor i in range(100):\n\tsum += i\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of sum immediately after the 10th time line 3 is executed?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -650,25 +650,25 @@
     {
         "original_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nWhat is the value of sum at the end of this program?",
         "answer": "2550",
-        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of sum at the end of this program?",
+        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of sum at the end of this program?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nWhat is the value of sum at the end of this program?",
         "answer": "2550",
-        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of sum at the end of this program?",
+        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of sum at the end of this program?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nWhat is the value of sum at the end of this program?",
         "answer": "2550",
-        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of sum at the end of this program?",
+        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of sum at the end of this program?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nWhat is the value of sum at the end of this program?",
         "answer": "2550",
-        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of sum at the end of this program?",
+        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of sum at the end of this program?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -698,25 +698,25 @@
     {
         "original_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nWhat is the value of after the third time line 3 is executed?",
         "answer": "294",
-        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of after the third time line 3 is executed?",
+        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of after the third time line 3 is executed?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nWhat is the value of after the third time line 3 is executed?",
         "answer": "294",
-        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of after the third time line 3 is executed?",
+        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of after the third time line 3 is executed?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nWhat is the value of after the third time line 3 is executed?",
         "answer": "294",
-        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of after the third time line 3 is executed?",
+        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of after the third time line 3 is executed?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nWhat is the value of after the third time line 3 is executed?",
         "answer": "294",
-        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of after the third time line 3 is executed?",
+        "new_question": "```\nsum = 0\nfor i in range(100, 0, -2):\n\tsum += i\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of after the third time line 3 is executed?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -746,25 +746,25 @@
     {
         "original_question": "```\nx = set([1, 1, 2, 3])\n```\nWhat is the value of x after this program executes?",
         "answer": "{1, 2, 3}",
-        "new_question": "```\nx = set([1, 1, 2, 3])\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of x after this program executes?",
+        "new_question": "```\nx = set([1, 1, 2, 3])\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of x after this program executes?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nx = set([1, 1, 2, 3])\n```\nWhat is the value of x after this program executes?",
         "answer": "{1, 2, 3}",
-        "new_question": "```\nx = set([1, 1, 2, 3])\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of x after this program executes?",
+        "new_question": "```\nx = set([1, 1, 2, 3])\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of x after this program executes?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nx = set([1, 1, 2, 3])\n```\nWhat is the value of x after this program executes?",
         "answer": "{1, 2, 3}",
-        "new_question": "```\nx = set([1, 1, 2, 3])\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of x after this program executes?",
+        "new_question": "```\nx = set([1, 1, 2, 3])\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of x after this program executes?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nx = set([1, 1, 2, 3])\n```\nWhat is the value of x after this program executes?",
         "answer": "{1, 2, 3}",
-        "new_question": "```\nx = set([1, 1, 2, 3])\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of x after this program executes?",
+        "new_question": "```\nx = set([1, 1, 2, 3])\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of x after this program executes?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -794,25 +794,25 @@
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat is the value of x.param at the end of this program?",
         "answer": "5",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of x.param at the end of this program?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of x.param at the end of this program?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat is the value of x.param at the end of this program?",
         "answer": "5",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of x.param at the end of this program?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of x.param at the end of this program?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat is the value of x.param at the end of this program?",
         "answer": "5",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of x.param at the end of this program?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of x.param at the end of this program?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat is the value of x.param at the end of this program?",
         "answer": "5",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of x.param at the end of this program?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of x.param at the end of this program?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -842,25 +842,25 @@
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat type of object is x?",
         "answer": "MyClass",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat type of object is x?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat type of object is x?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat type of object is x?",
         "answer": "MyClass",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat type of object is x?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat type of object is x?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat type of object is x?",
         "answer": "MyClass",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat type of object is x?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat type of object is x?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat type of object is x?",
         "answer": "MyClass",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat type of object is x?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat type of object is x?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -890,25 +890,25 @@
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat is the value of y.param at the end of this program?",
         "answer": "5",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of y.param at the end of this program?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of y.param at the end of this program?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat is the value of y.param at the end of this program?",
         "answer": "5",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of y.param at the end of this program?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of y.param at the end of this program?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat is the value of y.param at the end of this program?",
         "answer": "5",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of y.param at the end of this program?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of y.param at the end of this program?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nWhat is the value of y.param at the end of this program?",
         "answer": "5",
-        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of y.param at the end of this program?",
+        "new_question": "```\nclass MyClass():\n\tdef __init__(self, param):\n\t\tself.param = param\nx = MyClass(5)\ny = MyClass(x.param)\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of y.param at the end of this program?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -953,7 +953,7 @@
             "NameError",
             "ModuleNotFoundError"
         ],
-        "new_question": "```\nimport numpy as np\nx = numpy.zeros(10)\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nimport numpy as np\nx = numpy.zeros(10)\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat type of exception does this program produce?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
@@ -962,7 +962,7 @@
             "NameError",
             "ModuleNotFoundError"
         ],
-        "new_question": "```\nimport numpy as np\nx = numpy.zeros(10)\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nimport numpy as np\nx = numpy.zeros(10)\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat type of exception does this program produce?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
@@ -971,7 +971,7 @@
             "NameError",
             "ModuleNotFoundError"
         ],
-        "new_question": "```\nimport numpy as np\nx = numpy.zeros(10)\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nimport numpy as np\nx = numpy.zeros(10)\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat type of exception does this program produce?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
@@ -980,7 +980,7 @@
             "NameError",
             "ModuleNotFoundError"
         ],
-        "new_question": "```\nimport numpy as np\nx = numpy.zeros(10)\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nimport numpy as np\nx = numpy.zeros(10)\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat type of exception does this program produce?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -1020,7 +1020,7 @@
         "answer": [
             "SyntaxError"
         ],
-        "new_question": "```\nwhile True\n\tprint('hello world')\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nwhile True\n\tprint('hello world')\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat type of exception does this program produce?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
@@ -1028,7 +1028,7 @@
         "answer": [
             "SyntaxError"
         ],
-        "new_question": "```\nwhile True\n\tprint('hello world')\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nwhile True\n\tprint('hello world')\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat type of exception does this program produce?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
@@ -1036,7 +1036,7 @@
         "answer": [
             "SyntaxError"
         ],
-        "new_question": "```\nwhile True\n\tprint('hello world')\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nwhile True\n\tprint('hello world')\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat type of exception does this program produce?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
@@ -1044,7 +1044,7 @@
         "answer": [
             "SyntaxError"
         ],
-        "new_question": "```\nwhile True\n\tprint('hello world')\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nwhile True\n\tprint('hello world')\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat type of exception does this program produce?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -1084,7 +1084,7 @@
         "answer": [
             "TypeError"
         ],
-        "new_question": "```\nprint('1' + 2)\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nprint('1' + 2)\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat type of exception does this program produce?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
@@ -1092,7 +1092,7 @@
         "answer": [
             "TypeError"
         ],
-        "new_question": "```\nprint('1' + 2)\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nprint('1' + 2)\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat type of exception does this program produce?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
@@ -1100,7 +1100,7 @@
         "answer": [
             "TypeError"
         ],
-        "new_question": "```\nprint('1' + 2)\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nprint('1' + 2)\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat type of exception does this program produce?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
@@ -1108,7 +1108,7 @@
         "answer": [
             "TypeError"
         ],
-        "new_question": "```\nprint('1' + 2)\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\nprint('1' + 2)\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat type of exception does this program produce?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -1148,7 +1148,7 @@
         "answer": [
             "TypeError"
         ],
-        "new_question": "```\ndef f1(x):\n\tx[0] += 1\ny = f1(1)\nz = f2([1])\nr = f1('q')\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\ndef f1(x):\n\tx[0] += 1\ny = f1(1)\nz = f2([1])\nr = f1('q')\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat type of exception does this program produce?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
@@ -1156,7 +1156,7 @@
         "answer": [
             "TypeError"
         ],
-        "new_question": "```\ndef f1(x):\n\tx[0] += 1\ny = f1(1)\nz = f2([1])\nr = f1('q')\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\ndef f1(x):\n\tx[0] += 1\ny = f1(1)\nz = f2([1])\nr = f1('q')\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat type of exception does this program produce?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
@@ -1164,7 +1164,7 @@
         "answer": [
             "TypeError"
         ],
-        "new_question": "```\ndef f1(x):\n\tx[0] += 1\ny = f1(1)\nz = f2([1])\nr = f1('q')\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\ndef f1(x):\n\tx[0] += 1\ny = f1(1)\nz = f2([1])\nr = f1('q')\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat type of exception does this program produce?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
@@ -1172,7 +1172,7 @@
         "answer": [
             "TypeError"
         ],
-        "new_question": "```\ndef f1(x):\n\tx[0] += 1\ny = f1(1)\nz = f2([1])\nr = f1('q')\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\ndef f1(x):\n\tx[0] += 1\ny = f1(1)\nz = f2([1])\nr = f1('q')\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat type of exception does this program produce?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -1202,25 +1202,25 @@
     {
         "original_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nWhat is the value of z at immediately after line 7 has executed?",
         "answer": "55",
-        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat is the value of z at immediately after line 7 has executed?",
+        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat is the value of z at immediately after line 7 has executed?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
         "original_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nWhat is the value of z at immediately after line 7 has executed?",
         "answer": "55",
-        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat is the value of z at immediately after line 7 has executed?",
+        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat is the value of z at immediately after line 7 has executed?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
         "original_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nWhat is the value of z at immediately after line 7 has executed?",
         "answer": "55",
-        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat is the value of z at immediately after line 7 has executed?",
+        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat is the value of z at immediately after line 7 has executed?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
         "original_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nWhat is the value of z at immediately after line 7 has executed?",
         "answer": "55",
-        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat is the value of z at immediately after line 7 has executed?",
+        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat is the value of z at immediately after line 7 has executed?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     },
     {
@@ -1260,7 +1260,7 @@
         "answer": [
             "RecursionError"
         ],
-        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\nAnother program uses 'if-else' statements to determine the time of day.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nAnother program uses 'if-else' statements to determine the time of day.\nWhat type of exception does this program produce?",
         "sentence_template": "Another program uses 'if-else' statements to determine the time of day."
     },
     {
@@ -1268,7 +1268,7 @@
         "answer": [
             "RecursionError"
         ],
-        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\nThe variable 'count' is used to track iterations in a different program.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nThe variable 'count' is used to track iterations in a different program.\nWhat type of exception does this program produce?",
         "sentence_template": "The variable 'count' is used to track iterations in a different program."
     },
     {
@@ -1276,7 +1276,7 @@
         "answer": [
             "RecursionError"
         ],
-        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\nIn another script, 'list_items' is a list of grocery items.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nIn another script, 'list_items' is a list of grocery items.\nWhat type of exception does this program produce?",
         "sentence_template": "In another script, 'list_items' is a list of grocery items."
     },
     {
@@ -1284,7 +1284,7 @@
         "answer": [
             "RecursionError"
         ],
-        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\nThe function 'check_status' verifies if a user is logged in.\n```\nWhat type of exception does this program produce?",
+        "new_question": "```\ndef r(n):\n\tif n == 1:\n\t\treturn 1\n\telse:\n\t\treturn n + r(n-1)\nz = r(10)\ny = r(-10)\n```\nThe function 'check_status' verifies if a user is logged in.\nWhat type of exception does this program produce?",
         "sentence_template": "The function 'check_status' verifies if a user is logged in."
     }
 ]

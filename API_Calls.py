@@ -23,9 +23,17 @@ num_questions = args_dict["num_questions"]
 debug_print = args_dict["debug_print"]
 
 model = "gpt-3.5-turbo" if model_name == 'gpt-3.5' else "gpt-4o" if model_name == 'gpt-4o' else "gpt-4-turbo" if model_name == 'gpt-4' else None
+if "AD" in dataset_name:
+    is_code_dataset = True
+else:
+    is_code_dataset = False
 
 # API_KEY = os.getenv('API_KEY')
 API_KEY = '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'
+
+with open('description_prompt.json') as file:
+    data = json.load(file)
+description_prompt = data[dataset_name]
 
 def extract_questions_and_answers(json_file_name):
     """
@@ -74,6 +82,9 @@ def get_model_responses(system_prompt: dict, question: str):
 
 
 def extract_final_answer(response_text):
+    # If the dataset is for coding output: no format requirement
+    if is_code_dataset == True:
+        return response_text.split('####')[1]
     # Define the regular expression pattern to find 'Answer:' followed by a number
     pattern = re.compile(r'####\s*(\d+)', re.IGNORECASE)
     
@@ -94,12 +105,13 @@ def extract_final_answer(response_text):
     return answer#s
 
 
-def coc_system_prompt():
+def coc_system_prompt(description_prompt):
     """
     This function Defines the Chain of Code system prompt
     """
     sys_prompt = [{"role": "system", 
-                   "content": "Solve grade school math problem. Be aware to ignore irrelevant information given in the questions."
+                   "content": description_prompt,
+                #    "content": "Solve grade school math problem. Be aware to ignore irrelevant information given in the questions."
                     # "content": "You are an expert who always writes a pseudocode about a math problem "
                     #            "before start answering the question itself. Feel free to ignore irrelevant information given in the questions. In the end of the answer, "
                     #            "you should extract and print the final numeric answer that contains "
@@ -113,12 +125,13 @@ def coc_system_prompt():
                 ]    
     return sys_prompt
 
-def cot_system_prompt():
+def cot_system_prompt(description_prompt):
     """
     This function Defines the Chain of Thought system prompt
     """
     sys_prompt = [{"role": "system",
-                   "content": "Solve grade school math problem. Feel free to ignore irrelevant information given in the questions."
+                   "content": description_prompt,
+                #    "content": "Solve grade school math problem. Feel free to ignore irrelevant information given in the questions."
                 #    "content": "You are an expert at solving math problem, you should think step by step "
                 #               "before start answering the question itself. Feel free to ignore irrelevant information given in the questions. In the end of the answer, "
                 #               "you should extract and print the final numeric answer that contains "
@@ -133,6 +146,8 @@ def cot_system_prompt():
     return sys_prompt
 
 def convert_to_int(number):
+    if isinstance(number, int):
+        return number
     if number.isdigit():
         return int(number)
     return int(''.join(number.split(',')))
@@ -220,8 +235,56 @@ Therefore, Officer Hopps needs to average 5 tickets per day for the rest of the 
 #### 5
 """
     instruction = """
-Your should end with ####XXX, where you replace XXX with ONLY the final answer number.
+Your should end with a new line ####X, where you replace X with ONLY the final answer. 
 """
+    instruction = """
+Your should end with ####X, where you replace X with the output of your run, whatever form (int, str, list, set, Error, etc.) it is.
+"""
+
+    prompt = """
+The basket is made of wicker and has a handle. Are there only blue balls in the basket? Which of the following statements is/are sufficient to answer the previous question? \n1. There are no red balls in the basket. \n2. The smallest ball in the basket is green.\nA. Statement 1 alone is sufficient while statement 2 alone is insufficient\nB. Statement 2 alone is sufficient while statement 1 alone is insufficient\nC. Either statement 1 or statement 2 is sufficient\nD. Statement 1 and statement 2 taken together are sufficient\nE. Neither statement 1 nor statement 2 nor statements 1 and 2 taken together is sufficient\n
+"""
+    coc_sol = """
+A: Let's write down the pseudocode.
+1. Read Question: "Are there only blue balls in the basket?"
+2. Read Statement 1: "There are no red balls in the basket."
+3. Read Statement 2: "The smallest ball in the basket is green."
+4. Check if Statement 1 alone is sufficient to answer the question:
+    a. If no red balls, does it mean all balls are blue? (No, it could have other colors.)
+5. Check if Statement 2 alone is sufficient to answer the question:
+    a. If the smallest ball is green, does it mean all balls are blue? (No, at least one ball is green.)
+6. Check if both statements together are sufficient to answer the question:
+    a. If no red balls and the smallest ball is green, does it mean all balls are blue? (No, at least one ball is green.)
+7. Determine which of the following is correct:
+    - Statement 1 alone is sufficient. (False. There may or may not exist other colors.)
+    - Statement 2 alone is sufficient. (True. At least one ball is green, and we can answer the question with a No.)
+    - Either statement is sufficient. (False. Statement 1 is not suffient.)
+    - Both statements together are sufficient. (False. Statement 1 is not sufficient.)
+    - Neither statement alone nor together is sufficient. (False. Statement 2 alone is sufficient)
+8. Output the final numeric answer.
+#### 1
+"""
+    cot_sol = """
+A: Let's think step by step.
+To determine if there are only blue balls in the basket, let's analyze each statement:
+
+1. There are no red balls in the basket.
+   - This statement tells us that there are no red balls, but it does not provide information about the presence of other colors of balls (e.g., green, yellow, etc.). Therefore, this statement alone is insufficient to conclude that there are only blue balls in the basket.
+
+2. The smallest ball in the basket is green.
+   - This statement tells us that there is at least one green ball in the basket. Therefore, this statement alone is also insufficient to conclude that there are only blue balls in the basket.
+
+Now, let's consider the statements together:
+- Statement 1 tells us there are no red balls.
+- Statement 2 tells us there is at least one green ball.
+
+Even when taken together, these statements do not provide enough information to conclude that there are only blue balls in the basket. There could be other colors of balls present.
+
+Therefore, the correct answer is:
+####4
+"""
+    if "EIE" in dataset_name:
+        instruction += "0 incidates A, 1 indicates B, etc."
 
     # Initialize variables to record the responses
     coc_answers = []
@@ -240,7 +303,8 @@ Your should end with ####XXX, where you replace XXX with ONLY the final answer n
         match = False
         count = 0
         while not match: # Keep sending requests until format matches
-            coc_output = get_model_responses(coc_system_prompt(), prompt + coc_sol + "\n\nQ: " + question + instruction + "\nA: Let's write down the pseudocode: ")
+            # coc_output = get_model_responses(coc_system_prompt(description_prompt), prompt + coc_sol + "\n\nQ: " + question + instruction + "\nA: Let's write down the pseudocode: ")
+            coc_output = get_model_responses(coc_system_prompt(description_prompt), "Q: " + question + instruction + "\nA: Let's write down the pseudocode: ")
             coc_response = extract_final_answer(coc_output)
             match = True if coc_response != None else False
             total_wrong_format += 1 if not match else 0
@@ -252,7 +316,8 @@ Your should end with ####XXX, where you replace XXX with ONLY the final answer n
         match = False
         count = 0
         while not match: # Keep sending requests until format matches
-            cot_output = get_model_responses(cot_system_prompt(), prompt + cot_sol + "\n\nQ: " + question + instruction + "\nA: Let's think step by step:  ")
+            # cot_output = get_model_responses(cot_system_prompt(description_prompt), prompt + cot_sol + "\n\nQ: " + question + instruction + "\nA: Let's think step by step:  ")
+            cot_output = get_model_responses(cot_system_prompt(description_prompt), "Q: " + question + instruction + "\nA: Let's think step by step:  ")
             cot_response = extract_final_answer(cot_output)
             match = True if cot_response != None else False
             total_wrong_format += 1 if not match else 0
@@ -266,13 +331,27 @@ Your should end with ####XXX, where you replace XXX with ONLY the final answer n
         cot_answers.append({"question_id":i+1, "Q": question, "O": cot_output, "A": cot_response})
 
         # Compute and update success rate
-        answer = convert_to_int(answer)
-        coc_success += (answer == int(coc_response))
-        cot_success += (answer == int(cot_response))
+        if is_code_dataset == False:
+            answer = convert_to_int(answer)
+            coc_success += (answer == int(coc_response))
+            cot_success += (answer == int(cot_response))
+        else:
+            if isinstance(answer,list):
+                for accepted_ans in answer:
+                    if accepted_ans in coc_response:
+                        coc_success += 1
+                        break
+                for accepted_ans in answer:
+                    if accepted_ans in cot_response:
+                        cot_success += 1
+                        break
+            else:
+                coc_success += (answer in coc_response)
+                cot_success += (answer in cot_response)
         pbar.set_postfix({"coc acc": "{:.2f}".format(coc_success/(i+1)*100), "cot acc": "{:.2f}".format(cot_success/(i+1)*100)})
 
-        if answer != int(coc_response):
-            wrong_answers.append({"question_id":i+1, "Q": question, "A0": answer, "O1": coc_output, "A1": coc_response, "O2": cot_output, "A2": cot_response})
+        # if answer != int(coc_response):
+        #     wrong_answers.append({"question_id":i+1, "Q": question, "A0": answer, "O1": coc_output, "A1": coc_response, "O2": cot_output, "A2": cot_response})
         
     # Debugging purposes:
     # print(responses)
@@ -293,9 +372,9 @@ Your should end with ####XXX, where you replace XXX with ONLY the final answer n
         json.dump(cot_answers, file, indent=4)
     file.close()
 
-    with open(f"{dataset_dir}{dataset_name}_wrong_{model_name}_{num_questions}.json", "w") as file:
-        json.dump(wrong_answers, file, indent=4)
-    file.close()
+    # with open(f"{dataset_dir}{dataset_name}_wrong_{model_name}_{num_questions}.json", "w") as file:
+    #     json.dump(wrong_answers, file, indent=4)
+    # file.close()
 
 
 if __name__ == "__main__":
