@@ -29,7 +29,6 @@ else:
     is_code_dataset = False
 
 # API_KEY = os.getenv('API_KEY')
-API_KEY = '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'
 
 with open('description_prompt.json') as file:
     data = json.load(file)
