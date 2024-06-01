@@ -30,7 +30,6 @@ with open('description_prompt.json') as file:
 description_prompt = data[dataset_name]
 
 # API_KEY = os.getenv('API_KEY')
-API_KEY = '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'
 
 def extract_questions_and_answers(json_file_name):
     """
